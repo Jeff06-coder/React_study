@@ -1,0 +1,23 @@
+.layout-base {
+    padding: 16px;
+    margin: 2%;
+    background-color: #f7c520; /* amarelo ligeiramente ajustado */
+    border-radius: 8px; /* deixa o visual mais suave */
+    box-shadow: 0 2px 6px rgba(0.2, 0.2, 0.2, 0.2); /* leve sombra para destaque */
+}
+
+.layout-header {
+    padding: 10px 12px;
+    background-color: #f5a105; /* tom consistente com o base */
+    display: flex;
+    align-items: center; /* centraliza verticalmente */
+    justify-content: space-between; /* distribui melhor o conteúdo */
+    gap: 12px;
+    border-radius: 6px;
+}
+
+.layout-divider {
+    border: none;
+    border-top: 2px solid #00ccff;
+    margin: 12px 0;
+}

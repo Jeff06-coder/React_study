@@ -1,0 +1,31 @@
+
+
+
+
+.PageLayoutContainer{
+
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    
+
+}
+
+.PageLayoutConter{
+
+    max-width: 800px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 3px black;
+
+
+}
+
+.PageLayoutH1{
+
+    margin-top: 0%;
+
+}

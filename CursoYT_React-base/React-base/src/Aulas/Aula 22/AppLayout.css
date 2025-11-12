@@ -1,0 +1,24 @@
+.layout-base {
+
+    padding: 8px;
+    background-color: rgb(247, 197, 32);
+    margin: 2% 2%;
+    
+
+}
+
+.layout-header{
+
+    padding: 6px;
+    background-color: rgb(245, 161, 5);
+    display: flex;
+    gap: 10px;
+    
+    
+    
+}
+
+.layout-divider{
+
+    border-color: rgb(0, 204, 255);
+}
