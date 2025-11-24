@@ -20,6 +20,7 @@ export default function App() {
 
 }
 
+//Criando um style condicional
 const styles = StyleSheet.create({
   containerOn: {
     flex: 1, //Faz "pegar" a tela inteira
