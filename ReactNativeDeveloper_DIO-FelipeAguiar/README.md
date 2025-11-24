@@ -11,6 +11,7 @@
 ### Styles: é parecido com CSS, mas o ReactNative não lê arquivos CSS, por isso é necessário utilizar StyleSheet para as estilizações.Tem como implementá-las direto na linha de códigos ou utilizá-las como "variáveis"/objetos, para sua reutilizção e facilidade em manutenção do código.
 
 ### Image: é praticamente o padrão do HTML, mas nele ao invés de escrever 'src' para ler a imagem, tem que escrever 'soucer'.
+#### Obs: Quando for fazer o TypeScript reconhecer outros tipos como '.png' (exemplo), lembre-se de colocar o arquivo: 'index.d.ts' na pasta 'src' para a leitura do código.
 
 ## Hooks:
 ### Hooks são "ganchos" entre as "dimensões" do react, as interações em si.
