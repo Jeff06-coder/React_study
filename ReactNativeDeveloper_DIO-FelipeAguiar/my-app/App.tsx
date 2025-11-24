@@ -1,15 +1,21 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import symbolOff from './assets/pictures/symbol-off.png'; //Importando as imagens
 import symbolOn from './assets/pictures/symbol-on.png';
+import React, { useState } from 'react'
 
 
 
 export default function App() {
 
-  const  isActive = false
+  //Usando o hook useState
+  const [isActive, setisActive] = useState(false)
 
+  //Fazendo o fluxo de render no toque na tela
   function handleSymbol(){
-    console.log('Hello')
+    setisActive((oldValue:boolean)=> {
+    return !oldValue
+  })
+    console.log(isActive)
   }
 
   return (
