@@ -9,11 +9,11 @@ export default function Home() {
 return(
     <View style = {styles.container}>
         
-        <View>
+        <View style={styles.logoContainer}>
             <BatLogo/>
         </View>
         
-        <Text>AAAAAAAAAAAAAAAAA</Text>
+        <Text style={styles.txtStyle}>BUAHahahahaha</Text>
         <StatusBar style='auto'></StatusBar>
     </View>
     
