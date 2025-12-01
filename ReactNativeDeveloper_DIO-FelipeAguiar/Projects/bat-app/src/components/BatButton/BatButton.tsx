@@ -1,11 +1,13 @@
 import React from 'react';
-import { Pressable, View, Text } from 'react-native';
-
+import { Pressable, Text } from 'react-native';
+import { BATTextInput } from '../../components/TextInput/TextInput';
 import { styles } from './BatButtonStyle';
 
 export function BatButton() {
   return (
-    <>
+    <> 
+
+        <BATTextInput/>
 
         <Pressable>
             <Text style={styles.text}>👌 Generate 👌</Text>
