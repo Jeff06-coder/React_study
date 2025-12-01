@@ -28,8 +28,6 @@ const styles = StyleSheet.create({
   inputContainer:{
 
     width: '80%',
-    borderColor: 'white',
-    borderWidth: 2,
     alignItems: 'center',
     flexDirection: 'column'
 
