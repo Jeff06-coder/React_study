@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Pressable, Text } from 'react-native';
 import { BATTextInput } from '../../components/TextInput/TextInput';
 import { styles } from './BatButtonStyle';
 
 export function BatButton() {
+    const [pass, setPass] = useState('')
+
+    function handleGenerateButton() {
+        setPass('ola')
+    }
+
   return (
     <> 
 
-        <BATTextInput/>
+        <BATTextInput pass={pass}/>
 
-        <Pressable>
+        <Pressable
+            onPress={handleGenerateButton}>
             <Text style={styles.text}>👌 Generate 👌</Text>
         </Pressable>
         
