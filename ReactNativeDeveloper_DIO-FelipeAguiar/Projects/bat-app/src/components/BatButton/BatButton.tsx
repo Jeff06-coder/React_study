@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { Pressable, Text } from 'react-native';
 import { BATTextInput } from '../../components/TextInput/TextInput';
 import { styles } from './BatButtonStyle';
+import generatePass from '../../services/passwordSarvice';
+
 
 export function BatButton() {
     const [pass, setPass] = useState('')
 
     function handleGenerateButton() {
-        setPass('ola')
+        let generateToken = generatePass
+        setPass(generateToken)
     }
 
   return (
