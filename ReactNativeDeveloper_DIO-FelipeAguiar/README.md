@@ -13,7 +13,14 @@
 ### Image: é praticamente o padrão do HTML, mas nele ao invés de escrever 'src' para ler a imagem, tem que escrever 'soucer'.
 #### Obs: Quando for fazer o TypeScript reconhecer outros tipos como '.png' (exemplo), lembre-se de colocar o arquivo: 'index.d.ts' na pasta 'src' para a leitura do código.
 
+### Pressable: uma "div" para colocar um texto interativo com onPress.(tipo um button)
+
 ## Hooks:
 ### Hooks são "ganchos" entre as "dimensões" do react, as interações em si.
 
 ### useState: usado para fazer um refluxo de dado/render na página, para caso tenha mudado algo interno ligado a aparência, ele faz esse "reviu" quando utilizado, assim a página executa novamente a parte redefininda onde foi modificado.
+
+## Clipboard:
+### Uma extensão do expo, sendo instalado com 'npx expo install expo-clipboard'.É praticamente usado para acessar o charche(área de transferência) do seu CTRL+C e CTRL+V, pois uma das suas funções faz isso('Clipboard.setStringAsync("Mostrar")'), define tal valor no seu CTRL+C.
+
+### import * as Clipboard from 'expo-clipboard'; : importando o Clipboard para poder ser utilizado e funcional.

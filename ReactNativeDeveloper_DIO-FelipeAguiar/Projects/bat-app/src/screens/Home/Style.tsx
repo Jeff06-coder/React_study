@@ -23,6 +23,14 @@ const styles = StyleSheet.create({
   txtStyle: {
     color: 'white',
     fontSize: 20
+  },
+
+  inputContainer:{
+
+    width: '80%',
+    alignItems: 'center',
+    flexDirection: 'column'
+
   }
 
 
