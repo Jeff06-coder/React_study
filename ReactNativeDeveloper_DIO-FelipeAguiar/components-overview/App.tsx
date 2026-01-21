@@ -7,7 +7,7 @@ export default function App() {
 
      <View onTouchStart={(event) => Alert.alert("event")} onTouchEnd={(evento)=> {Alert.alert('Éeee')}}>
 
-      <Text>Clique aqui!</Text>
+      <Text style={styles.texto}>Clique aqui!</Text>
 
      </View>
 
@@ -22,5 +22,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  texto: {
+    fontSize: 20,
+    color: 'yellow',
+    backgroundColor: 'black',
   },
 });
