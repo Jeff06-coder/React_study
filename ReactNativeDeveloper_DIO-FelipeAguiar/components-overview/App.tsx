@@ -7,10 +7,13 @@ export default function App() {
 
      <View onTouchStart={(event) => Alert.alert("event")} onTouchEnd={(evento)=> {Alert.alert('Éeee')}}>
 
-      <Text style={styles.texto}>Clique aqui!</Text>
+      {/* Usando array de estilo, misturando dois estilos */}
+      <Text style={[styles.texto, styles.border]}>Clique aqui!</Text>
       
       {/* Propriedade selectable permite copiar o texto ao segurar o toque sobre ele */}
       <Text selectable={true}>Copia aqui!</Text>
+
+      <StatusBar style="auto" />
      </View>
 
     </View>
@@ -24,6 +27,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  border: {
+    borderWidth: 2,
+    borderColor: 'red',
   },
   texto: {
     fontSize: 20,
