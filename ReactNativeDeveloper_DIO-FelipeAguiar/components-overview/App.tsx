@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Image, Text, View } from 'react-native';
-import imgPlay from './assets/play-button.png';
+import { Alert, StyleSheet, TextInput, Image, Text, View } from 'react-native';
+
 
 export default function App() {
   return (
@@ -17,8 +17,13 @@ export default function App() {
       <StatusBar style="auto" />
      </View>
 
-     <Image source={imgPlay} style={{ width: 200, height: 200 }} />
+     <Image source={require('C:/Users/jefferson.coelho/Downloads/Pessoal/React_study/ReactNativeDeveloper_DIO-FelipeAguiar/components-overview/assets/play-button.png')} style={{ width: 200, height: 200 }} />
 
+      <TextInput style={styles.input}
+        onChange={() =>console.log('digitando')}
+        keyboardType='phone-pad'
+        placeholder='Digite seu numero'
+      />
     </View>
 
   );
@@ -35,6 +40,15 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'red',
   },
+  input:{
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    backgroundColor: 'blue',
+    color: 'white',
+  },
+
   texto: {
     fontSize: 20,
     color: 'yellow',
