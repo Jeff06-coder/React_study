@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, TextInput, Image, Text, View } from 'react-native';
+import { Alert, StyleSheet, TextInput, Image, Text, View, Button } from 'react-native';
+import React, {useState} from 'react';
 
 
 export default function App() {
+    const [inputValue, setInputValue] = useState('');
+
   return (
     <View style={styles.container}>
 
@@ -15,6 +18,8 @@ export default function App() {
       <Text selectable={true}>Copia aqui!</Text>
 
       <StatusBar style="auto" />
+
+
      </View>
 
      <Image source={require('C:/Users/jefferson.coelho/Downloads/Pessoal/React_study/ReactNativeDeveloper_DIO-FelipeAguiar/components-overview/assets/play-button.png')} style={{ width: 200, height: 200 }} />
@@ -22,10 +27,13 @@ export default function App() {
       <TextInput style={styles.input}
 
         //Definindo o pad que vai setr usado no input e capiturando o valor digitado com o evento onChange
-        onChange={(event) =>console.log(event.nativeEvent.text)}
-        keyboardType='default'
+        onChange={(text) =>setInputValue(text.nativeEvent.text)}
         placeholder='Digite seu numero'
+        value={inputValue}
       />
+      <Button title='Click aqui' onPress={()=>{Alert.alert('valor atual',inputValue)}} />
+
+
     </View>
 
   );
