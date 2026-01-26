@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Image, Text, View } from 'react-native';
+import imgPlay from './assets/play-button.png';
 
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
 
       <StatusBar style="auto" />
      </View>
+
+     <Image source={imgPlay} style={{ width: 200, height: 200 }} />
 
     </View>
 
