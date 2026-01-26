@@ -20,8 +20,10 @@ export default function App() {
      <Image source={require('C:/Users/jefferson.coelho/Downloads/Pessoal/React_study/ReactNativeDeveloper_DIO-FelipeAguiar/components-overview/assets/play-button.png')} style={{ width: 200, height: 200 }} />
 
       <TextInput style={styles.input}
-        onChange={() =>console.log('digitando')}
-        keyboardType='phone-pad'
+
+        //Definindo o pad que vai setr usado no input e capiturando o valor digitado com o evento onChange
+        onChange={(event) =>console.log(event.nativeEvent.text)}
+        keyboardType='default'
         placeholder='Digite seu numero'
       />
     </View>
