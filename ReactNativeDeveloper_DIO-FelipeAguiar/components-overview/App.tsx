@@ -16,7 +16,23 @@ export default function App() {
     <ScrollView>
     <View style={styles.container}>
 
-     <View onTouchStart={(event) => Alert.alert("event")} onTouchEnd={(evento)=> {Alert.alert('Éeee')}}>
+     
+
+     <Image source={require('C:/Users/jefferson.coelho/Downloads/Pessoal/React_study/ReactNativeDeveloper_DIO-FelipeAguiar/components-overview/assets/play-button.png')} style={{display: ligado ? 'flex' : 'none'}} />
+
+      <TextInput style={styles.input}
+
+        //Definindo o pad que vai setr usado no input e capiturando o valor digitado com o evento onChange
+        onChange={(text) =>setInputValue(text.nativeEvent.text)}
+        placeholder='Digite seu numero'
+        value={inputValue}
+      />
+      <Button title='Click aqui' onPress={()=>{Alert.alert('valor atual',inputValue)}} />
+
+      <Switch value={ligado} onValueChange={handleToggleSwitch}></Switch>
+    
+
+    <View onTouchStart={(event) => Alert.alert("event")} onTouchEnd={(evento)=> {Alert.alert('Éeee')}}>
 
       {/* Usando array de estilo, misturando dois estilos */}
       <Text style={[styles.texto, styles.border]}>Clique aqui!</Text>
@@ -29,20 +45,9 @@ export default function App() {
 
      </View>
 
-     <Image source={require('C:/Users/jefferson.coelho/Downloads/Pessoal/React_study/ReactNativeDeveloper_DIO-FelipeAguiar/components-overview/assets/play-button.png')} style={{ width: 200, height: 200 }} />
-
-      <TextInput style={styles.input}
-
-        //Definindo o pad que vai setr usado no input e capiturando o valor digitado com o evento onChange
-        onChange={(text) =>setInputValue(text.nativeEvent.text)}
-        placeholder='Digite seu numero'
-        value={inputValue}
-      />
-      <Button title='Click aqui' onPress={()=>{Alert.alert('valor atual',inputValue)}} />
-      <Switch value={ligado} onValueChange={handleToggleSwitch}></Switch>
-    
-
     </View>
+
+    
     </ScrollView>
   );
 }
