@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, TextInput, Image, Text, View, Button } from 'react-native';
+import { Alert, StyleSheet, TextInput, Image, Text, View, Button, ScrollView } from 'react-native';
 import React, {useState} from 'react';
+
 
 
 export default function App() {
     const [inputValue, setInputValue] = useState('');
 
   return (
+    <ScrollView>
     <View style={styles.container}>
 
      <View onTouchStart={(event) => Alert.alert("event")} onTouchEnd={(evento)=> {Alert.alert('Éeee')}}>
@@ -33,9 +35,10 @@ export default function App() {
       />
       <Button title='Click aqui' onPress={()=>{Alert.alert('valor atual',inputValue)}} />
 
+    
 
     </View>
-
+    </ScrollView>
   );
 }
 
