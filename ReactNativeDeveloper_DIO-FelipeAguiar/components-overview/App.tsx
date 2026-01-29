@@ -1,11 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, TextInput, Image, Text, View, Button, ScrollView } from 'react-native';
+import { Alert, StyleSheet, TextInput, Image, Text, View, Button, ScrollView, Switch } from 'react-native';
 import React, {useState} from 'react';
 
 
 
 export default function App() {
     const [inputValue, setInputValue] = useState('');
+    const [ligado, setLigado] = useState(false);
+
+    function handleToggleSwitch(){
+      setLigado(!ligado);
+    }
 
   return (
     <ScrollView>
@@ -34,7 +39,7 @@ export default function App() {
         value={inputValue}
       />
       <Button title='Click aqui' onPress={()=>{Alert.alert('valor atual',inputValue)}} />
-
+      <Switch value={ligado} onValueChange={handleToggleSwitch}></Switch>
     
 
     </View>
