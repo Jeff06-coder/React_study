@@ -9,13 +9,13 @@ function CaixaRed(){
 
 function CaixaBlue(){
   return(
-    <View style={{width:150, height:150, backgroundColor:'blue'}}></View>
+    <View style={{width:100, height:100, backgroundColor:'blue'}}></View>
   )
 }
 
 function CaixaYellow(){
   return(
-    <View style={{width:150, height:150, backgroundColor:'yellow'}}></View>
+    <View style={{width:100, height:100, backgroundColor:'yellow'}}></View>
   )
 }
  
@@ -42,10 +42,13 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    //Determina o quanto o container vai ocupar da tela
     flex: 1,
+    //Define a direção dos elementos dentro do container
     flexDirection: 'row-reverse',
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    //Alinha os elementos no eixo principal (Ele anda junto com o flexDirection)
+    justifyContent: 'space-evenly',
   },
 });
