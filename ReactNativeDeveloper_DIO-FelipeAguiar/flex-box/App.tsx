@@ -3,19 +3,19 @@ import { StyleSheet, Text, View } from 'react-native';
 
 function CaixaRed(){
   return(
-    <View style={{width:150, height:150, backgroundColor:'red'}}></View>
+    <View style={{width:150, height:150, backgroundColor:'red', }}></View>
   )
 }
 
 function CaixaBlue(){
   return(
-    <View style={{width:100, height:100, backgroundColor:'blue',}}></View>
+    <View style={{width:50, height:50, backgroundColor:'blue', flexBasis: 100}}></View>
   )
 }
 
 function CaixaYellow(){
   return(
-    <View style={{width:'100%', height:100, backgroundColor:'yellow',}}></View>
+    <View style={{width:100, height:100, backgroundColor:'yellow',}}></View>
   )
 }
  
@@ -30,7 +30,7 @@ export default function App() {
       <CaixaRed />
       <CaixaBlue />
       <CaixaYellow />
-      <CaixaYellow />
+      
 
       
       <StatusBar style="auto" />
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     //Determina o quanto o container vai ocupar da tela
     flex: 1,
     //Define a direção dos elementos dentro do container
-    flexDirection: 'column-reverse',
+    flexDirection: 'row-reverse',
     //Quando não cabe mais na tela, ele quebra os elementos em nova linha ou coluna
     flexWrap: 'wrap-reverse',
     backgroundColor: '#9fb1a8',
