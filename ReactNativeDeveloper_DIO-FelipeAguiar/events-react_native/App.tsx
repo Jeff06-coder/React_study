@@ -16,13 +16,14 @@ export default function App() {
     <View style={styles.container}>
 
       <Text
-      
+
        style={{fontFamily: 'Arial', fontSize: 20}} 
        onPressIn={() => console.log("PressIn acionado (Aciona quando começa a pressionar)")}
        onPress={() => console.log("Componente Principal Pressionado (Aciona quando solta)")}
        onPressOut={() => console.log("Dedo saiu")}
        onLongPress={() => console.log("LongPress acionado")}
-       
+       onTextLayout={() => console.log("Text Layout")}
+       //Dispara quando carrega o texto do layout
        
         >Componente Principal</Text>
 
