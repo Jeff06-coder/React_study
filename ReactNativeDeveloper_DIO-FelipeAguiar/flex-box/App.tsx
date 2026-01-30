@@ -45,10 +45,11 @@ const styles = StyleSheet.create({
     //Determina o quanto o container vai ocupar da tela
     flex: 1,
     //Define a direção dos elementos dentro do container
-    flexDirection: 'row-reverse',
-    backgroundColor: '#fff',
+    flexDirection: 'column',
+    backgroundColor: '#9fb1a8',
+    //Alinha o eixo segundario (perpendicular (horizontal) ao flexDirection)
     alignItems: 'center',
     //Alinha os elementos no eixo principal (Ele anda junto com o flexDirection)
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-around',
   },
 });
