@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     //Determina o quanto o container vai ocupar da tela
     flex: 1,
     //Define a direção dos elementos dentro do container
-    flexDirection: 'row',
+    flexDirection: 'column-reverse',
     //Quando não cabe mais na tela, ele quebra os elementos em nova linha ou coluna
     flexWrap: 'wrap-reverse',
     backgroundColor: '#9fb1a8',
@@ -57,5 +57,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     //Alinha os elementos no eixo principal (Ele anda junto com o flexDirection)
     justifyContent: 'center',
+    //Alinha o conteúdo quando há mais espaço disponível no container (so tem efeito com o wrap)
+    alignContent: 'center',
   },
 });
