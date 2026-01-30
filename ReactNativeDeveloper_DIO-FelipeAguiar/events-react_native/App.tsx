@@ -1,3 +1,4 @@
+// Melhor guia sempre sera a documentação da linguagem para saber como e quais eventos usar
 import { helloV } from './src/actions';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -31,9 +32,9 @@ export default function App() {
       {/* <Text onPress={() => handlerPress(1)} style={{fontSize: 18,}}>Open up App.tsx to start working on your app!</Text>
       <Text onPress={() => console.log("onPress Inline")} style={{fontSize: 20,}}>Inline</Text>
       <Text onPress={handlerFunction} style={{fontSize: 20,}}>Handler Function</Text>
-      <Text onPress={() => handlerPress(2)} style={{fontSize: 20,}}>Handler Function with parameters</Text>
+      <Text onPress={() => handlerPress(2)} style={{fontSize: 20,}}>Handler Function with parameters</Text>*/}
 
-      <Text onPress={helloV} style={{fontSize: 20,}}>Hello Viajante Another file</Text> */}
+      <Text onPress={helloV} style={{fontSize: 20,}}>Hello Viajante Another file</Text> 
 
 
 
