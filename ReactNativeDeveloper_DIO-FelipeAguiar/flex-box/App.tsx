@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 function CaixaRed(){
   return(
-    <View style={{width:150, height:150, backgroundColor:'red', }}></View>
+    <View style={{width:150, height:150, backgroundColor:'red', flexGrow: 1}}></View>
   )
 }
 
