@@ -18,8 +18,9 @@ export default function App() {
       <Text
        style={{fontFamily: 'Arial', fontSize: 20}} 
        onPressIn={() => console.log("PressIn acionado (Aciona quando começa a pressionar)")}
+       onPressOut={() => console.log("Dedo saiu")}
        onPress={() => console.log("Componente Principal Pressionado (Aciona quando solta)")}
-
+       
        
         
         
