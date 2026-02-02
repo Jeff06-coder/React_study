@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Image, Button, } from 'react-native';
-import BatSinal from './assets/bat-sinal.jpg';
+import BatSinal from '../../assets/bat-sinal.jpg';
 import { useState } from "react";
 
 
@@ -14,9 +14,11 @@ export default function Home() {
 
   return (
     
-     <View style={styles.container}>
+ <View style={styles.container}>
      
-      {layout === false && (<View  style={styles.button}>
+
+    
+    <View  style={styles.button}>
 
       <Image 
       
@@ -29,36 +31,11 @@ export default function Home() {
     
       <Button 
       title="Ativar Bat-Sinal" 
-      onPress={handleLayoutChange}
+      onPress={() => console.log("Bat-Sinal ativado!")}
       color="#000000"
       />
 
     </View>
-  
-      )}
-
-      {layout === true && (<View  style={styles.button}>
-
-      <Image 
-      
-      source={BatSinal} 
-      style={styles.image} 
-      />
-
-
-      
-    
-      <Button 
-      title="Desativar Bat-Sinal" 
-      onPress={handleLayoutChange}
-      color="#000000"
-      />
-
-    </View>
-  
-      )}
-    
-    
 
 
 
@@ -71,6 +48,8 @@ export default function Home() {
 
   );
 }
+
+
 
 
 
