@@ -1,6 +1,6 @@
 // Melhor guia sempre sera a documentação da linguagem para saber como e quais eventos usar
 import { helloV } from './src/actions';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 async function handlerPress(id: number){
   console.log('Texto pressionado', id);
@@ -15,6 +15,18 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+
+      <TextInput 
+      style={{fontSize: 20}}
+      placeholder="Digite algo aqui"
+      onChange={() => console.log("OnChange executado")}
+      //Dispara quando o texto muda
+      onChangeText={() => console.log('Um texto mudado')}
+      //Dispara quando o texto muda sempre depois do onChange
+      onFocus={() => console.log("Usuário focou no input")}
+      //Dispara quando o usuario entra no input
+
+      ></TextInput>
 
       <Text
 
