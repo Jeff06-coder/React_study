@@ -78,7 +78,7 @@ export default function Home() {
           />
         </View>
 
-         <View style={styles.button2}>
+         <View style={styles.button1}>
           
         </View>
         
@@ -129,11 +129,11 @@ const styles = StyleSheet.create({
     height: 150,
   },
   button1: {
-    padding: 10,
+    padding: 5,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 10,
+    marginBottom: 5,
   },
   text: {
     fontSize: 20,
