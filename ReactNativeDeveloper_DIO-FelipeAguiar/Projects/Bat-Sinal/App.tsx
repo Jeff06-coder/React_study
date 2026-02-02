@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Image, Button, } from 'react-native';
+import { StyleSheet, View, Image, Button, Text, TextInput } from 'react-native';
 import BatSinal from './assets/bat-sinal.jpg';
 import { useState } from "react";
 
@@ -16,46 +16,76 @@ export default function Home() {
     
      <View style={styles.container}>
      
+      {/* Primeira tela */}
       {layout === false && (<View  style={styles.button}>
 
-      <Image 
+        {/* Imagem do Bat-Sinal da Primeira Tela*/}
+        <Image 
       
-      source={BatSinal} 
-      style={styles.image} 
-      />
+          source={BatSinal} 
+          style={styles.image} 
+        />
 
 
-      
-    
-      <Button 
-      title="Ativar Bat-Sinal" 
-      onPress={handleLayoutChange}
-      color="#000000"
-      />
 
-    </View>
-  
+        {/* Primeiro botão */}
+        <Button 
+          title="Ativar Bat-Sinal" 
+          onPress={handleLayoutChange}
+          color="#000000"
+        />
+
+      </View>
       )}
 
-      {layout === true && (<View  style={styles.button}>
+      {/* Segunda tela */}
 
-      <Image 
+      {layout === true && (<View  style={styles.container}>
+
+        {/* Imagem do Bat-Sinal da Segunda Tela*/}
+        <Image 
       
-      source={BatSinal} 
-      style={styles.image} 
-      />
+          source={BatSinal} 
+          style={[styles.image1]} 
+        />
+
+       
+        <View style={styles.container1}>
+
+          <View style={{margin: 10, justifyContent: 'center', alignItems: 'center', width: '95%'}}>
+            <Text style={[styles.text]}>Bat-Sinal Ativado!</Text>
+          </View>
+
+          <Text style={styles.text}>Digite seu nome:</Text>
+          <TextInput style={styles.input} placeholder="Escreva aqui"/>
+
+          
+        </View>
 
 
-      
-    
-      <Button 
-      title="Desativar Bat-Sinal" 
-      onPress={handleLayoutChange}
-      color="#000000"
-      />
 
-    </View>
-  
+        {/* Segundo botão */}
+        <View style={styles.button1}>
+          <Button 
+            title="Desativar Bat-Sinal" 
+            onPress={handleLayoutChange}
+            color="#ff0000"
+          />
+          <Button 
+            title="Enviar Bat-Sinal" 
+            onPress={handleLayoutChange}
+            color="#1a8f3d"
+          />
+        </View>
+
+         <View style={styles.button2}>
+          
+        </View>
+        
+
+
+
+      </View>
       )}
     
     
@@ -80,16 +110,51 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
   image: {
     marginBottom: 150,
-    width: 200,
-    height: 200,
+    width: 450,
+    height: 450,
   },
   button: {
 
     alignItems: 'center',
     marginBottom: 300,
+    width: 200,
+  },
+  image1: {
+    
     width: 150,
-  }
+    height: 150,
+  },
+  button1: {
+    padding: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    
+  },
+  container1: {
+    flex: 1,
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    backgroundColor: '#ffffff',
+    borderColor: '#000000',
+    borderWidth: 3,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start', 
+    width: 360,
+    
+  },
+  input: {
+    fontSize: 18,
+    height: 40,
+    borderColor: 'gray',
+  },
 });
