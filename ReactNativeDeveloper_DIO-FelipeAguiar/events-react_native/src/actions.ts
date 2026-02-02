@@ -1,0 +1,1 @@
+export const helloV = () => console.log("Hello Viajante");
