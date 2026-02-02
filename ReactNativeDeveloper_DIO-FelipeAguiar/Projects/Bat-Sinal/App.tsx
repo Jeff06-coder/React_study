@@ -1,12 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import BatSinal from './assets/bat-sinal.jpg';
+
 
 export default function App() {
   return (
+
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+     
+      <Image 
+      source={BatSinal} 
+      style={styles.image} />
+
+
+      <Button title="Clique aqui" onPress={() => console.log("Botão clicado!")}/>
+
+
+
+
+
+
       <StatusBar style="auto" />
     </View>
+
   );
 }
 
@@ -16,5 +32,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  image: {
+    marginBottom: 480,
+    width: 200,
+    height: 200,
   },
 });
