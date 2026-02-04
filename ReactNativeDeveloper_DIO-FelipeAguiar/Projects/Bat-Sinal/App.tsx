@@ -59,6 +59,18 @@ export default function Home() {
           <Text style={styles.text}>Digite seu nome:</Text>
           <TextInput style={styles.input} placeholder="Escreva aqui"/>
 
+          <Text style={styles.text}>Digite seu número de telefone:</Text>
+          <TextInput style={styles.input} placeholder="Escreva aqui"/>
+
+          <Text style={styles.text}>Digite seu endereço:</Text>
+          <TextInput style={styles.input} placeholder="Escreva aqui"/>
+
+          <View style={{alignSelf: 'center', marginTop: 10, marginBottom: 20, flex: 1, justifyContent: 'center', alignItems: 'center', width: '90%', borderColor: 'gray', borderWidth: 1, }}>
+
+            <Text style={{fontSize: 20, fontWeight: 'bold', marginBottom: 10}}>Descreva sua emergência:</Text>
+            <TextInput style={{ fontSize: 18,height: 120, borderColor: 'gray', padding: 10, marginBottom: 200, color: 'red'}} multiline={false} textAlignVertical="top" placeholder="Escreva aqui"/>
+
+          </View>
           
         </View>
 
@@ -73,7 +85,7 @@ export default function Home() {
           />
           <Button 
             title="Enviar Bat-Sinal" 
-            onPress={handleLayoutChange}
+          onPress={() => alert("Bat-Sinal Enviado!BATMAN VAI AJUDAR VOCÊ!")}
             color="#1a8f3d"
           />
         </View>
@@ -156,5 +168,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     height: 40,
     borderColor: 'gray',
+  },
+  container2: {
+    marginBottom: 20,
+    width: '95%',
+    borderColor: 'red',
+    borderWidth: 1,
+    
+    
   },
 });
