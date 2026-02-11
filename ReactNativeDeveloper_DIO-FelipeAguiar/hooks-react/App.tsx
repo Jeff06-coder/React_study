@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Button, StyleSheet, Text, View } from 'react-native';
 
@@ -21,6 +21,11 @@ const increment = () => {
         }else { alert('O contador não pode ser menor que 0') }
         
       };
+
+// O useEffect é um hook que permite executar uma função toda vez que o componente for atualizado ou quando uma variável for atualizada.
+useEffect(() => {
+  console.log('O contador foi atualizado: ' + counter);
+}, [counter]);
 
   return (
 
