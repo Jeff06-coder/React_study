@@ -1,72 +1,48 @@
-import React, { useState, useEffect, useReducer } from 'react';
+import React, { useState, useReducer } from 'react';
+import { Button, StyleSheet, TextInput, View, Text } from 'react-native';
 
-import { Button, StyleSheet, Text, View } from 'react-native';
-
-const reducer = (state: { count: string }, action: { type: string }) => {
+const listener = (state: any, action: any) => {
   switch (action.type) {
-    case 'incrementC':
-      return { count: state.count + "A" };
-    case 'decrementC':
-      return { count: state.count.slice(0, -1) };
+    case 'addTask':
+      return { tasks: [...state.tasks, {name:action.value, isDone:false}] };
+    case 'removeTask':
+      return { tasks: state.tasks.filter((task: any) => task.name !== action.value) };
     default:
       throw new Error('Invalid action type');
-  }};
+  }
+}
 
 export default function App() {
 
-const [counter, setCounter] = useState(0);
-// 1. Criar o estado para o contador
-// 2. Criar a função para incrementar o contador
-// 3. Criar a função para decrementar o contador
-// Só podem ser criados fora do return
-const increment = () => {
+  const [state, dispatch] = useReducer(listener, {tasks: []});
 
-    setCounter((prevState) => prevState + 1);
-        
-      };
+  const [value, setValue] = useState('');
 
-const decrement = () => {
-    if(counter > 0){
-        setCounter((prevState) => prevState - 1);
-    }else { alert('O contador não pode ser menor que 0') }
-        
-      };
+  const handleChange = () => {
+    dispatch({ type: 'addTask', value });
+  };
 
-// O useEffect é um hook que permite executar uma função toda vez que o componente for atualizado ou quando uma variável for atualizada.
-useEffect(() => {
-  console.log('O contador foi atualizado: ' + counter);
-}, [counter]);
-
-
-
-const [state, dispatch] = useReducer(reducer, { count: "a" });
-
-  const incrementC = () => {
-    dispatch({ type: 'incrementC' });
+  const handleChange2 = () => {
+    dispatch({ type: 'removeTask', value });
   }
+    
 
-  const decrementC = () => {
-    dispatch({ type: 'decrementC' });
-  }
+
 
   return (
 
 
     <View style={styles.container}>
-      <Text style={{fontSize: 50}}>{counter}{state.count}</Text>
+      <TextInput style={styles.input} placeholder="Digite algo..." value={value} onChangeText={(text)=> setValue(text)} />
 
       
 
       <View style={styles.inline}>
-        <Button title="Remove" onPress={decrement}></Button>
-        <Button title="Add" onPress={increment}></Button>
+        <Button title="Remover tarefa" onPress={handleChange2} ></Button>
+        <Button title="Adicionar tarefa" onPress={handleChange}></Button>
       </View>
 
-      <View style={styles.inline}>
-        <Button title="Remove" onPress={decrementC}></Button>
-        <Button title="Add" onPress={incrementC}></Button>
-      </View>
-
+      {state.tasks.map((task: any) => <Text>{task.name}</Text>)}
      
     </View>
   );
@@ -75,15 +51,23 @@ const [state, dispatch] = useReducer(reducer, { count: "a" });
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#32f0b7',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  input: {
+    width: 200,
+    height: 40,
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 5,
+    padding: 10,
   },
   inline:{
     
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     width: 200,
 
 
