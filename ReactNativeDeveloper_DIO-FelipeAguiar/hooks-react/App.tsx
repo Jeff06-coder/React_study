@@ -16,7 +16,10 @@ const increment = () => {
       };
 
       const decrement = () => {
-        setCounter((prevState) => prevState - 1);
+        if(counter > 0){
+          setCounter((prevState) => prevState - 1);
+        }else { alert('O contador não pode ser menor que 0') }
+        
       };
 
   return (
