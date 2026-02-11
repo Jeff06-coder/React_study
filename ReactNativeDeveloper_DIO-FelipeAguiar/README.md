@@ -20,6 +20,10 @@
 
 ### useState: usado para fazer um refluxo de dado/render na página, para caso tenha mudado algo interno ligado a aparência, ele faz esse "reviu" quando utilizado, assim a página executa novamente a parte redefininda onde foi modificado.
 
+### useEffect: é adicionado um "efeito colateral", useEffect(()=>{function},[monitoramento]), ele dispara uma atividade/function onde você desejar, é como se a cada ação de algo/useState ele te da uma resposta.
+
+### useReducer: dispara ações no react-native, onde você decide o que ele vai fazer.Bem mais complexo de se fazer, mas o bom é que você decide o que vai fazer com ele.
+
 ## Clipboard:
 ### Uma extensão do expo, sendo instalado com 'npx expo install expo-clipboard'.É praticamente usado para acessar o charche(área de transferência) do seu CTRL+C e CTRL+V, pois uma das suas funções faz isso('Clipboard.setStringAsync("Mostrar")'), define tal valor no seu CTRL+C.
 
